@@ -23,7 +23,4 @@ but not new Linux systems), edit the Makefile and uncomment the SYSV_LIBS
 line.  If you're doing SSL, uncomment those lines too.  Otherwise, just do
 a make.
 
-Feedback is welcome - send bug reports, enhancements, checks, money
-orders, etc. to the addresses below.
 
-    Jef Poskanzer  jef@mail.acme.com  http://www.acme.com/jef/
