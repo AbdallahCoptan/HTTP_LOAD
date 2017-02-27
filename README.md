@@ -1,5 +1,4 @@
-                   # HTTP_LOAD
-          Multiprocessing http test client
+        # HTTP_LOAD: Multiprocessing http test client #
 
 http_load runs multiple http fetches in parallel, to test the
 throughput of a web server.  However unlike most such test clients,
@@ -23,4 +22,9 @@ but not new Linux systems), edit the Makefile and uncomment the SYSV_LIBS
 line.  If you're doing SSL, uncomment those lines too.  Otherwise, just do
 a make.
 
+## Get Starting ##
 
+Clone the project in a new folder by the following commands: 
+
+		$ git clone https://github.com/AbdallahCoptan/HTTP_LOAD.git
+		$ cd HTTP_LOAD
