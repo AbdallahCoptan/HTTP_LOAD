@@ -22,9 +22,65 @@ but not new Linux systems), edit the Makefile and uncomment the SYSV_LIBS
 line.  If you're doing SSL, uncomment those lines too.  Otherwise, just do
 a make.
 
-## Get Starting ##
+## Getting Started ##
 
 Clone the project in a new folder by the following commands: 
 
 		$ git clone https://github.com/AbdallahCoptan/HTTP_LOAD.git
 		$ cd HTTP_LOAD
+
+### Building & Installing http_load ###
+
+You just need to invoke a make command to install:
+
+		$ cd HTTP_LOAD
+		$ make
+		$ sudo make install
+
+To test if the http_load is installed successfully, by asking for the help by:
+
+		$ ./http_load
+
+Here is the output, which is the usage of the tool:
+
+		usage:  ./http_load [-checksum] [-throttle] [-proxy host:port] [-verbose] [-timeout secs] [-sip sip_file]
+			    -parallel N | -rate N [-jitter]
+			    -fetches N | -seconds N
+			    url_file
+		One start specifier, either -parallel or -rate, is required.
+		One end specifier, either -fetches or -seconds, is required.
+
+
+## Using http_load Utility ##
+
+To use the HTTP_LOAD utility, you need first to creat a file to contains the URLS or the servers you want to test so as following:
+
+		$ cd HTTP_LOAD
+		$ nano urls
+
+And inside the file write each url in one line: (if you have apache server locally)
+
+		http://127.0.0.1/
+		http://google.com/
+		...
+
+**NOW** if you want to run the HTTP_LOAD test by the following command as an instance:
+
+		$ ./http_load -rate 5 -seconds 10 urls
+
+Here it is the output:
+
+		49 fetches, 1 max parallel, 563990 bytes, in 10 seconds
+		11510 mean bytes/connection
+		4.9 fetches/sec, 56399 bytes/sec
+		msecs/connect: 0.0879388 mean, 0.118 max, 0.065 min
+		msecs/first-response: 0.204061 mean, 0.724 max, 0.161 min
+		HTTP response codes:
+		  code 200 -- 49
+
+###Read More About HTTP Load Tools###
+
+See also: test the [HTTP PING](http://www.acme.com/software/http_ping/) , Test the [HTTP GET](http://www.acme.com/software/http_get/) and have a look for a page of other [HTTP Load Test Tools](http://www.softwareqatest.com/qatweb1.html#LOAD)
+
+### Reference ###
+Actually, the work of the HTTP_LOAD tool is credited to the http_load [page](http://www.acme.com/software/http_load/), but this unfortunately is not on github and that is why i upload it here and provide some help !!!
