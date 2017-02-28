@@ -9,13 +9,13 @@ See the manual entry for more details.
 
 Files in this distribution:
 
-    README		this
+    README    		this
     Makefile		guess
     http_load.c		source file
     http_load.1		manual entry
     timers.c		timers package
     timers.h		headers for timers package
-    make_test_files	simple script to create a set of test files
+    make_test_files   	simple script to create a set of test files
 
 To build: If you're on a SysV-like machine (which includes old Linux systems
 but not new Linux systems), edit the Makefile and uncomment the SYSV_LIBS
