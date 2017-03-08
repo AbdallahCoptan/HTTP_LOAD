@@ -61,6 +61,7 @@ To use the HTTP_LOAD utility, you need first to creat a file to contains the URL
 And inside the file write each url in one line: (if you have apache server locally)
 
 		http://127.0.0.1/
+		http://10.10.1.200:80/  ## if remote Http server 
 		http://google.com/
 		...
 
